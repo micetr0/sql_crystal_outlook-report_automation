@@ -44,7 +44,7 @@ Function Get-query_OutFileName ($queryFlag, $monthStart, $monthEnd)
                                  FROM dbo.vwaudits 
                                  WHERE username = `'whu`' AND AUDITTIME >= '$formatMonthStart' AND AUDITTIME < '$formatMonthEnd' ORDER BY audittime DESC
                                  "
-
+                                 
                     $outFile   = "PrivelegeAudit"
                     ;break
                 }
@@ -197,4 +197,4 @@ Function Get-SQLReports ($query_OutFileName, $query_outputDir, $query_userDir, $
 #Test calls:
 
 #$a = Get-prevMonthDates
-#Get-SQLReports LOGREVIEW $a
+#Get-SQLReports LOGREVIEW $a 
